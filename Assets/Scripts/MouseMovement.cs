@@ -9,8 +9,10 @@ public class MouseMovement : MonoBehaviour
     public float topClamp = -90;
     public float bottomClamp = 90;
 
-    float xRotation = 0;
-    float yRotation = 0;
+    [SerializeField]
+    private float xRotation = 0;
+    [SerializeField]
+    private float yRotation = 0;
 
     void Start()
     {
