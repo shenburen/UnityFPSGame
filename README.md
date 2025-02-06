@@ -8,4 +8,6 @@ https://www.youtube.com/watch?v=swOfmyJvb98&list=PLtLToKUhgzwm1rZnTeWSRAyx9tl8Vb
 
 ### 第三方资源
 
+https://assetstore.unity.com/packages/vfx/particles/legacy-particle-pack-73777
+
 请在“Assets”目录下添加“ThirdParty”文件夹，并将上述资源导入到项目中后拖入其中。
