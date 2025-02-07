@@ -4887,9 +4887,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isShooting: 0
   readyToShoot: 0
-  shootingDelay: 0.5
+  shootingDelay: 0.3
   allowRest: 1
-  bulletPerBurst: 0
+  bulletPerBurst: 1
   burstBulletsLeft: 0
   spreadIntensity: 0.05
   bulletPrefab: {fileID: 2968722505142842098, guid: 7a3bd886d623d5a40a32378010037684,
@@ -4898,6 +4898,10 @@ MonoBehaviour:
   bulletVelocity: 500
   bulletPrefabLifeTime: 3
   muzzleEffect: {fileID: 281713133471897729}
+  reloadTime: 1.5
+  magazineSize: 7
+  bulletsLeft: 0
+  isReloading: 0
   currentShootingMode: 0
 --- !u!95 &7745275372149945955
 Animator:
