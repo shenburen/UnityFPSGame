@@ -55,11 +55,6 @@ public class HUDManager : MonoBehaviour
             ammoTypeUI.sprite = GetAmmoSprite(model);
 
             activeWeaponUI.sprite = GetWeaponSprite(model);
-
-            if (unActiveWeapon)
-            {
-                unActiveWeaponUI.sprite = GetWeaponSprite(unActiveWeapon.thisWeaponModel);
-            }
         }
         else
         {
@@ -68,6 +63,14 @@ public class HUDManager : MonoBehaviour
 
             ammoTypeUI.sprite = emptySlot;
             activeWeaponUI.sprite = emptySlot;
+        }
+
+        if (unActiveWeapon)
+        {
+            unActiveWeaponUI.sprite = GetWeaponSprite(unActiveWeapon.thisWeaponModel);
+        }
+        else
+        {
             unActiveWeaponUI.sprite = emptySlot;
         }
     }

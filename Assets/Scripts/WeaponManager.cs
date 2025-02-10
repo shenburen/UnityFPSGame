@@ -99,6 +99,8 @@ public class WeaponManager : MonoBehaviour
 
         weapon.isActiveWeapon = true;
         weapon.animator.enabled = true;
+
+        SetLayerRecursively(pickedupWeapon, "WeaponRender");
     }
 
     private void DropCurrentWeapon(GameObject pickedupWeapon)
@@ -113,6 +115,8 @@ public class WeaponManager : MonoBehaviour
             weaponDrop.transform.SetParent(pickedupWeapon.transform.parent);
             weaponDrop.transform.localPosition = pickedupWeapon.transform.localPosition;
             weaponDrop.transform.localRotation = pickedupWeapon.transform.localRotation;
+
+            SetLayerRecursively(weaponDrop, "Default");
         }
     }
 
@@ -130,6 +134,16 @@ public class WeaponManager : MonoBehaviour
         {
             Weapon newWeapon = activeWeaponSlot.transform.GetChild(0).GetComponent<Weapon>();
             newWeapon.isActiveWeapon = true;
+        }
+    }
+
+    private void SetLayerRecursively(GameObject obj, string name)
+    {
+        obj.layer = LayerMask.NameToLayer(name);
+
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, name); // 递归修改子对象的图层
         }
     }
     #endregion

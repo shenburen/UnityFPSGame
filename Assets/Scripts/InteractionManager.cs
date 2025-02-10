@@ -29,6 +29,27 @@ public class InteractionManager : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
+            if (hoveredWeapon)
+            {
+                hoveredWeapon.GetComponent<Outline>().enabled = false;
+                hoveredWeapon = null;
+            }
+            if (hoveredAmmoBox)
+            {
+                hoveredAmmoBox.GetComponent<Outline>().enabled = false;
+                hoveredAmmoBox = null;
+            }
+            if (hoveredThrowable)
+            {
+                hoveredThrowable.GetComponent<Outline>().enabled = false;
+                hoveredThrowable = null;
+            }
+
+            if (Vector3.Distance(hit.transform.position, Camera.main.transform.position) > 5)
+            {
+                return;
+            }
+
             GameObject objectHitByRaycast = hit.transform.gameObject;
 
             // 武器高亮
@@ -40,13 +61,6 @@ public class InteractionManager : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     WeaponManager.Instance.PickupWeapon(objectHitByRaycast.gameObject);
-                }
-            }
-            else
-            {
-                if (hoveredWeapon)
-                {
-                    hoveredWeapon.GetComponent<Outline>().enabled = false;
                 }
             }
 
@@ -62,13 +76,6 @@ public class InteractionManager : MonoBehaviour
                     Destroy(hoveredAmmoBox.gameObject);
                 }
             }
-            else
-            {
-                if (hoveredAmmoBox)
-                {
-                    hoveredAmmoBox.GetComponent<Outline>().enabled = false;
-                }
-            }
 
             // 投掷物高亮
             if (objectHitByRaycast.GetComponent<Throwable>())
@@ -80,13 +87,6 @@ public class InteractionManager : MonoBehaviour
                 {
                     WeaponManager.Instance.PickupThrowable(hoveredThrowable);
                     Destroy(hoveredThrowable.gameObject);
-                }
-            }
-            else
-            {
-                if (hoveredThrowable)
-                {
-                    hoveredThrowable.GetComponent<Outline>().enabled = false;
                 }
             }
         }
