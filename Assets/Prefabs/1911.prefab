@@ -194,7 +194,9 @@ MonoBehaviour:
   allowRest: 1
   bulletPerBurst: 1
   burstBulletsLeft: 0
-  spreadIntensity: 0.05
+  spreadIntensity: 0
+  hipSpreadIntensity: 0.4
+  adsSpreadIntensity: 0.04
   bulletPrefab: {fileID: 2968722505142842098, guid: 7a3bd886d623d5a40a32378010037684,
     type: 3}
   bulletSpawn: {fileID: 2629853835967284363}
@@ -207,6 +209,7 @@ MonoBehaviour:
   isReloading: 0
   spawnPosition: {x: 0.18, y: 1.14, z: 0.54}
   spawnRotation: {x: 0, y: -180, z: 0}
+  isADS: 0
   thisWeaponModel: 0
   currentShootingMode: 0
 --- !u!95 &8542352360574513073
