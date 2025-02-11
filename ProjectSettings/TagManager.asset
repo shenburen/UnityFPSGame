@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Beer
   - Ground
+  - Zombie
   layers:
   - Default
   - TransparentFX
