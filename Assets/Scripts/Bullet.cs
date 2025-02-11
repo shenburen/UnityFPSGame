@@ -6,12 +6,7 @@ public class Bullet : MonoBehaviour
 {
     private void OnCollisionEnter(Collision objectWeHit)
     {
-        if (objectWeHit.gameObject.CompareTag("Target"))
-        {
-            CreateBulletImpactEffect(objectWeHit);
-            Destroy(gameObject);
-        }
-        if (objectWeHit.gameObject.CompareTag("Wall"))
+        if (objectWeHit.gameObject.CompareTag("Ground") || objectWeHit.gameObject.CompareTag("Wall") || objectWeHit.gameObject.CompareTag("Target"))
         {
             CreateBulletImpactEffect(objectWeHit);
             Destroy(gameObject);
