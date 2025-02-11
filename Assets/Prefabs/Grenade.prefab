@@ -156,7 +156,7 @@ MonoBehaviour:
   countdown: 0
   hasExploded: 0
   hasBeenThrown: 0
-  throwableType: 0
+  throwableType: 1
 --- !u!114 &5072493723818346972
 MonoBehaviour:
   m_ObjectHideFlags: 0
