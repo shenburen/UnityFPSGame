@@ -14,5 +14,8 @@ https://www.youtube.com/watch?v=swOfmyJvb98&list=PLtLToKUhgzwm1rZnTeWSRAyx9tl8Vb
 - https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488?aid=1011lu5No
 - https://assetstore.unity.com/packages/2d/gui/icons/fps-icons-pack-45240?aid=1011lu5No
 - https://assetstore.unity.com/packages/vfx/particles/war-fx-5669?aid=1011lu5No
+- https://assetstore.unity.com/packages/3d/props/industrial/cargo-container-45175?aid=1011lu5No
+- https://assetstore.unity.com/packages/3d/environments/industrial/barrels-63623?aid=1011lu5No
+- https://assetstore.unity.com/packages/3d/props/weapons/defense-line-vol-3-barrier-breaker-free-251803?aid=1011lu5No
 
 请在“Assets”目录下添加“ThirdParty”文件夹，并将上述资源导入到项目中后拖入其中。
