@@ -15,18 +15,6 @@ public class Enemy : MonoBehaviour
         navAgent = GetComponent<NavMeshAgent>();
     }
 
-    private void Update()
-    {
-        if (navAgent.velocity.magnitude > 0.1)
-        {
-            animator.SetBool("IsWalking", true);
-        }
-        else
-        {
-            animator.SetBool("IsWalking", false);
-        }
-    }
-
     public void TakeDamage(int damageAmount)
     {
         HP -= damageAmount;
@@ -47,5 +35,17 @@ public class Enemy : MonoBehaviour
         {
             animator.SetTrigger("Damage");
         }
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 2.5f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 18);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, 21);
     }
 }
