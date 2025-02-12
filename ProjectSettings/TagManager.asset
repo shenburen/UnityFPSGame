@@ -9,6 +9,7 @@ TagManager:
   - Beer
   - Ground
   - Zombie
+  - Enemy
   layers:
   - Default
   - TransparentFX
