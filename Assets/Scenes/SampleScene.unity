@@ -3904,6 +3904,8 @@ MonoBehaviour:
     type: 3}
   smokeEffect: {fileID: 3625968778065692887, guid: 26cea6dfe6f2af846bc1329952bf71c2,
     type: 3}
+  bloodSprayEffect: {fileID: 2399916453594330988, guid: 0e73481511f88874290ba17cec5c25fc,
+    type: 3}
 --- !u!4 &654982122
 Transform:
   m_ObjectHideFlags: 0

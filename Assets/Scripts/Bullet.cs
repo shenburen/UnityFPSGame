@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +22,11 @@ public class Bullet : MonoBehaviour
 
         if (objectWeHit.gameObject.CompareTag("Enemy"))
         {
-            objectWeHit.gameObject.GetComponent<Enemy>().TakeDamage(bulletDamage);
+            if (objectWeHit.gameObject.GetComponent<Enemy>().isDead == false)
+            {
+                objectWeHit.gameObject.GetComponent<Enemy>().TakeDamage(bulletDamage);
+            }
+            CreateBloodSprayEffect(objectWeHit);
             Destroy(gameObject);
         }
     }
@@ -35,5 +40,16 @@ public class Bullet : MonoBehaviour
             Quaternion.LookRotation(contact.normal)
         );
         hole.transform.SetParent(objectWeHit.gameObject.transform);
+    }
+
+    private void CreateBloodSprayEffect(Collision objectWeHit)
+    {
+        ContactPoint contact = objectWeHit.contacts[0];
+        GameObject bloodSpray = Instantiate(
+            GlobalReferences.Instance.bloodSprayEffect,
+            contact.point,
+            Quaternion.LookRotation(contact.normal)
+        );
+        bloodSpray.transform.SetParent(objectWeHit.gameObject.transform);
     }
 }

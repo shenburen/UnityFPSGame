@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public bool isDead;
     [SerializeField] private int HP = 100;
     private Animator animator;
     private NavMeshAgent navAgent;
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
             {
                 animator.SetTrigger("Die2");
             }
+            isDead = true;
         }
         else
         {
