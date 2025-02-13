@@ -17,5 +17,7 @@ https://www.youtube.com/watch?v=swOfmyJvb98&list=PLtLToKUhgzwm1rZnTeWSRAyx9tl8Vb
 - https://assetstore.unity.com/packages/3d/props/industrial/cargo-container-45175?aid=1011lu5No
 - https://assetstore.unity.com/packages/3d/environments/industrial/barrels-63623?aid=1011lu5No
 - https://assetstore.unity.com/packages/3d/props/weapons/defense-line-vol-3-barrier-breaker-free-251803?aid=1011lu5No
+- https://assetstore.unity.com/packages/vfx/particles/blood-gush-73426
+- https://assetstore.unity.com/packages/audio/sound-fx/creatures/zombie-voice-audio-pack-free-196645
 
 请在“Assets”目录下添加“ThirdParty”文件夹，并将上述资源导入到项目中后拖入其中。
