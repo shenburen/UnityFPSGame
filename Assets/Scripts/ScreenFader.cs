@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScreenBlackout : MonoBehaviour
+public class ScreenFader : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDuration = 3;
@@ -11,6 +11,7 @@ public class ScreenBlackout : MonoBehaviour
     public void StartFade()
     {
         StartCoroutine(FadeOut());
+        fadeImage.gameObject.SetActive(true);
     }
 
     private IEnumerator FadeOut()
