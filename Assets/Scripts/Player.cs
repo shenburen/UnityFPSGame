@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
@@ -100,5 +101,19 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         gameOverUI.SetActive(true);
+
+        int waveSurvived = GlobalReferences.Instance.waveNumber;
+        if (waveSurvived - 1 > SaveLoadManager.Instance.LoadHightScore())
+        {
+            SaveLoadManager.Instance.SaveHighScore(waveSurvived - 1);
+        }
+
+        StartCoroutine(ReturnToMainMenu());
+    }
+
+    private IEnumerator ReturnToMainMenu()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("MainMenu");
     }
 }
