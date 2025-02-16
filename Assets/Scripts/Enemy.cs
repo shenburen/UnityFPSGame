@@ -33,6 +33,8 @@ public class Enemy : MonoBehaviour
             }
             isDead = true;
             SoundManager.Instance.zombieChannel2.PlayOneShot(SoundManager.Instance.zombieDeath);
+
+            StartCoroutine(DestroyEnemy());
         }
         else
         {
@@ -51,5 +53,11 @@ public class Enemy : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, 21);
+    }
+
+    private IEnumerator DestroyEnemy()
+    {
+        yield return new WaitForSeconds(5);
+        Destroy(gameObject);
     }
 }
